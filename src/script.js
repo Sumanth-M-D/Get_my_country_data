@@ -44,7 +44,8 @@ function getCountryAndNeighbour(country) {
       return response.json();
     })
     .then(data => {
-      const country = data[1] || data[0]; //preveiously colonised countries has 2 data
+      console.log(data);
+      const country = data[0]; //preveiously colonised countries has 2 data
       renderCountry(country);
 
       const neighbours = country.borders;
